@@ -1,4 +1,7 @@
+
+
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +20,7 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" />
   </head>
 
   <body>
@@ -70,7 +73,7 @@
                 <div class="d-flex flex-row align-items-start">
                   <img
                     class="rounded-circle"
-                    src="images/tofayel.jpg"
+                    src="{% static 'images/tofayel.jpg' %}"
                     width="40"
                   /><textarea
                     class="form-control ml-1 shadow-none textarea"
@@ -96,7 +99,7 @@
               <div class="media">
                 <img
                   class="mr-3 rounded-circle"
-                  src="images/sadi.jpg"
+                  src="{% static 'images/sadi.jpg' %}"
                   width="40"
                   alt="Generic placeholder image"
                 />
@@ -130,7 +133,7 @@
               <div class="media w-75">
                 <img
                   class="mr-3 rounded-circle"
-                  src="images/tofayel.jpg"
+                  src="{% static 'images/tofayel.jpg' %}"
                   width="40"
                   alt="Generic placeholder image"
                 />
@@ -160,7 +163,7 @@
                   <div class="media mt-3">
                     <a class="pr-3" href="#">
                       <img
-                        src="images/sadi.jpg"
+                        src="{% static 'images/sadi.jpg' %}"
                         class="rounded-circle"
                         width="40"
                         alt="Generic placeholder image"
