@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +18,7 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}" />
   </head>
 
   <body>
@@ -168,7 +169,7 @@
           <div class="col">
             <div class="card text-center">
               <div class="card-header">
-                <img src="images/sadi.jpg" alt="" class="img" />
+                <img src="{% static 'images/sadi.jpg' %}" alt="" class="img" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Sadiqul Haque Sadi</h5>
@@ -181,7 +182,7 @@
           <div class="col">
             <div class="card text-center">
               <div class="card-header">
-                <img src="images/tofayel.jpg" alt="" class="img" />
+                <img src="{% static 'images/tofayel.jpg' %}" alt="" class="img" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Md. Tofayel Islam</h5>
@@ -194,7 +195,7 @@
           <div class="col">
             <div class="card text-center">
               <div class="card-header">
-                <img src="images/sadi.jpg" alt="" class="img" />
+                <img src="{% static 'images/sadi.jpg' %}" alt="" class="img" />
               </div>
               <div class="card-body">
                 <h5 class="card-title">Sadiqul Haque Sadi</h5>
@@ -236,7 +237,7 @@
         </div>
         <div class="footer_grid">
           <h2>From</h2>
-          <img src="images/bd.png" alt="" />
+          <img src="{% static 'images/bd.png' %}" alt="" />
           <h4 style="font-family: sans-serif; margin-top: 10px">
             &copy; showmik <span id="date"></span>
           </h4>
