@@ -22,66 +22,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
+    {% include 'blogs/navbar.html' %}
     <div class="jumbotron">
       <h1 class="display-4">Hello, Developers!</h1>
       <p class="lead">
@@ -126,8 +67,8 @@
               </ul>
             </div>
 
-            <a class="share_list_link" href="#"
-              ><i class="fas fa-user-friends"> {{ blog.author.name }}. {{ blog.time_created }}</i></a
+            <a class="share_list_link lead" href="#"
+              ><i class="fas fa-user-friends"> {{ blog.author.name }} | {{ blog.time_created }}</i></a
             >
             <p>
               Python includes a number of predefined built-in functions that can
@@ -149,21 +90,22 @@
           Variable width content
         </div> -->
       <div class="col-4">
+
         <div class="side_menu_bar">
           <h3>Popular posts</h3>
+            {% for blog in blog %}
           <ul>
             <li class="side_list">
-                {% for blog in blog %}
 
-
-
-              <a class="side_list_links" href="#"
+              <a class="side_list_links" href="{% url 'news' blog.id %}"
                 >{{ blog.title }}</a
               >
-                {% endfor %}
+
             </li>
           </ul>
+            {% endfor %}
         </div>
+
       </div>
     </div>
 
@@ -215,41 +157,7 @@
       </div>
     </section>
 
-    <footer>
-      <div class="my_footer">
-        <div class="footer_grid">
-          <h2>Communicate With Us</h2>
-          <h3>Email</h3>
-          <a href=""><p>miskatshowmik@gmail.com</p></a>
-        </div>
-        <div class="footer_grid">
-          <h2>My Social Networks</h2>
-          <ul>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-github"></i></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer_grid">
-          <h2>From</h2>
-          <img src="{% static 'images/bd.png' %}" alt="" />
-          <h4 style="font-family: sans-serif; margin-top: 10px">
-            &copy; showmik <span id="date"></span>
-          </h4>
-        </div>
-      </div>
-    </footer>
+    {% include 'blogs/footer.html' %}
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

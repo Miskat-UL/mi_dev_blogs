@@ -26,7 +26,9 @@
 </head>
 
 <body>
-<main class="container-fluid">
+{% include 'blogs/navbar.html' %}
+
+<main class="container-fluid my-5">
     <div class="row">
         <div class="col-9 main1">
             <div class="d-flex flex-column">
@@ -34,16 +36,20 @@
                     <h2 class="text-danger">
                         {{ current.title }}
                     </h2>
-
-                    <p class="d-inline">Author - <a href="">{{ current.author.name }} <img
+                    <img
                             class="mr-3 rounded-circle"
-                            src="{% static 'images/sadi.jpg' %}"
+                            src="{% get_media_prefix %}{{ current.author.author_img }}"
                             width="40"
                             alt="Generic placeholder image"
-                    /></a></p>
+                    />
+                    <p class="d-inline">Author - <a href="">{{ current.author.name }}</a></p>
+                    <div class="tag">
+                        <span>Tags</span>
                     {% for tag in tags %}
-                        <span class="badge badge-pill badge-secondary">#{{ tag }}</span>
+                        <span class="badge badge-pill badge-info">#{{ tag }}</span>
                     {% endfor %}
+                    </div>
+
 
 
                     <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid my-5" alt="Responsive image">
@@ -107,7 +113,7 @@
                         />
                         <div class="media-body">
                             <h5 class="mt-0">Sadiqul Haque</h5>
-                            {{current.comment.comment_body }}
+                            {{ current.comment.comment_body }}
                             <div class="">
                                 <div class="d-flex flex-row fs-12">
                                     <div class="like p-2 cursor">
@@ -210,6 +216,9 @@
         </div>
     </div>
 </main>
+
+
+{% include 'blogs/footer.html' %}
 </body>
 
 <script
