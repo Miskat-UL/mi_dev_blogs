@@ -32,33 +32,26 @@
             <div class="d-flex flex-column">
                 <div class="p-2">
                     <h2 class="text-danger">
-                        Python most powerful functions: map(), filter(), and reduce() in
-                        5 minutes
+                        {{ current.title }}
                     </h2>
 
-                    <p>Author - <a href="">Md. Tofayel islam</a></p>
+                    <p>Author - <a href="">{{ current.author.name }} <img
+                            class="mr-3 rounded-circle"
+                            src="{% static 'images/sadi.jpg' %}"
+                            width="40"
+                            alt="Generic placeholder image"
+                    /></a></p>
+                    <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid" alt="Responsive image">
 
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                        vitae et ratione? Quas aut adipisci, neque totam libero commodi
-                        illo maxime vel pariatur fugit maiores excepturi repellendus
-                        alias facere modi, culpa tempora architecto quasi doloremque,
-                        laborum laboriosam nobis. Blanditiis corrupti et ea quidem
-                        dolores deleniti similique repellat. Aperiam cum inventore ipsam
-                        eligendi perspiciatis necessitatibus quidem atque tempora
-                        tenetur molestias, sunt, excepturi consequuntur impedit. Eveniet
-                        tenetur doloribus eius eligendi fugit velit, similique in
-                        quibusdam neque aperiam beatae adipisci aliquid totam? Ullam,
-                        libero. Ab quia facere laborum repellat. Exercitationem, maiores
-                        sunt? Quam delectus magnam eligendi exercitationem modi. Commodi
-                        nemo maxime porro minima.
+                        {{ current.body }}
                     </p>
                     <div class="">
                         <div class="d-flex flex-row fs-12">
                             <div class="like p-2 cursor">
                                 <a href=""
                                 ><i class="far fa-heart"></i
-                                ><span class="ml-1">React</span></a
+                                ><span class="ml-1">{{ current.react }}</span></a
                                 >
                             </div>
                             <div class="like p-2 cursor">
@@ -109,11 +102,7 @@
                         />
                         <div class="media-body">
                             <h5 class="mt-0">Sadiqul Haque</h5>
-                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                            scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                            vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                            nisi vulputate fringilla. Donec lacinia congue felis in
-                            faucibus.
+                            {{current.comment.comment_body }}
                             <div class="">
                                 <div class="d-flex flex-row fs-12">
                                     <div class="like p-2 cursor">

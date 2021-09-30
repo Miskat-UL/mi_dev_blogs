@@ -102,32 +102,32 @@
 
     <div class="row main_main">
       <div class="col-8">
+          {% for blog in blog %}
         <section class="blogs_section">
           <h2>Recent Posts</h2>
           <div class="blog_title">
             <div class="head_share">
-              <a href="#">
+              <a href="{% url 'news' blog.id %}">
                 <h1 class="display-4">
-                  Python most powerful functions: map(), filter(), and reduce()
-                  in 5 minutes
+                    {{ blog.title}}
                 </h1>
               </a>
               <ul>
                 <li class="share_list">
                   <a class="share_list_link" href="#"
-                    ><i class="far fa-heart"> 32</i></a
+                    ><i class="far fa-heart"> {{blog.react }}</i></a
                   >
                 </li>
                 <li class="share_list">
                   <a class="share_list_link" href="#"
-                    ><i class="far fa-comment-alt"> 12</i></a
+                    ><i class="far fa-comment-alt"> {{ blog.comment.count }}</i></a
                   >
                 </li>
               </ul>
             </div>
 
             <a class="share_list_link" href="#"
-              ><i class="fas fa-user-friends"> SADI . 2 hours ago</i></a
+              ><i class="fas fa-user-friends"> {{ blog.author.name }}. {{ blog.time_created }}</i></a
             >
             <p>
               Python includes a number of predefined built-in functions that can
@@ -143,6 +143,7 @@
             </p>
           </div>
         </section>
+          {% endfor %}
       </div>
       <!-- <div class="col-md-1">
           Variable width content
@@ -152,9 +153,14 @@
           <h3>Popular posts</h3>
           <ul>
             <li class="side_list">
+                {% for blog in blog %}
+
+
+
               <a class="side_list_links" href="#"
-                >Lollipop Charts: Advanced Data Visualization in Python</a
+                >{{ blog.title }}</a
               >
+                {% endfor %}
             </li>
           </ul>
         </div>

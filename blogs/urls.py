@@ -3,5 +3,5 @@ from blogs import views
 
 urlpatterns = [
     path('', views.home),
-    path('home/', views.home2)
+    path('news/<str:pk>', views.home2, name='news')
 ]
