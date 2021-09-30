@@ -35,13 +35,18 @@
                         {{ current.title }}
                     </h2>
 
-                    <p>Author - <a href="">{{ current.author.name }} <img
+                    <p class="d-inline">Author - <a href="">{{ current.author.name }} <img
                             class="mr-3 rounded-circle"
                             src="{% static 'images/sadi.jpg' %}"
                             width="40"
                             alt="Generic placeholder image"
                     /></a></p>
-                    <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid" alt="Responsive image">
+                    {% for tag in tags %}
+                        <span class="badge badge-pill badge-secondary">#{{ tag }}</span>
+                    {% endfor %}
+
+
+                    <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid my-5" alt="Responsive image">
 
                     <p>
                         {{ current.body }}

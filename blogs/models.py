@@ -2,6 +2,26 @@ from django.db import models
 from django.db.models.deletion import SET_NULL
 
 
+class Tag(models.Model):
+    name = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+class Category(models.Model):
+    TYPE_CHOICES = [
+        ('category', 'Category'),
+        ('subcategory', 'Subcategory'),
+        ('tag', 'Tag')
+    ]
+    name = models.CharField(max_length=100)
+    # slug = models.SlugField()
+    type = models.CharField(choices=TYPE_CHOICES, max_length=20)
+
+    def __str__(self):
+        return self.name
+
+
 class Author(models.Model):
     name = models.CharField(max_length=50)
     author_img = models.ImageField(upload_to="media")
@@ -33,6 +53,8 @@ class Blog(models.Model):
     time_created = models.DateTimeField(auto_now_add=True)
     react = models.IntegerField(blank=True, null=True)
     comment = models.ManyToManyField(Comment)
+    category = models.ForeignKey(Category, on_delete=SET_NULL, null=True)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.title

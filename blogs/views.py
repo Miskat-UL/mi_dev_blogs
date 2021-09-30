@@ -12,7 +12,13 @@ def home(request):
 
 def home2(request, pk):
     current_blog = Blog.objects.get(id=pk)
+    tag = current_blog.tags.all()
+    tags = []
+    for i in range(len(tag)):
+
+        tags.append(tag[i])
     context = {
-        'current': current_blog
+        'current': current_blog,
+        'tags': tags
     }
     return render(request, 'blogs/single_blog_page.html', context)
