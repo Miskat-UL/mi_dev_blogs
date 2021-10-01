@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Blog
 
 
@@ -22,3 +22,10 @@ def home2(request, pk):
         'tags': tags
     }
     return render(request, 'blogs/single_blog_page.html', context)
+
+
+def get_likes(request, pk):
+    blog = Blog.objects.get(id=pk)
+    blog.react += 1
+    blog.save()
+    return redirect('/')
