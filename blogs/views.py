@@ -24,6 +24,16 @@ def home2(request, pk):
     return render(request, 'blogs/single_blog_page.html', context)
 
 
+def home3(request,pk):
+    current_blog = Blog.objects.get(id=pk)
+    author = current_blog.author
+    context = {
+        'author': author
+
+    }
+    return render(request, 'blogs/author_personal.html',context)
+
+
 def get_likes(request, pk):
     blog = Blog.objects.get(id=pk)
     blog.react += 1
