@@ -29,3 +29,8 @@ def get_likes(request, pk):
     blog.react += 1
     blog.save()
     return redirect('/')
+
+
+def blog_write(request):
+
+    return render(request, 'blogs/blogWrite.html')
