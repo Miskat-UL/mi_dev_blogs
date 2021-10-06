@@ -45,11 +45,10 @@
                     <p class="d-inline">Author - <a href="">{{ current.author.name }}</a></p>
                     <div class="tag">
                         <span>Tags</span>
-                    {% for tag in tags %}
-                        <span class="badge badge-pill badge-info">#{{ tag }}</span>
-                    {% endfor %}
+                        {% for tag in tags %}
+                            <span class="badge badge-pill badge-info">#{{ tag }}</span>
+                        {% endfor %}
                     </div>
-
 
 
                     <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid my-5" alt="Responsive image">
@@ -202,17 +201,34 @@
                 </div>
             </div>
         </div>
-        <div class="col-2">
-           <!-- <div class="media">
-                <img class="mr-3" src="..." alt="Generic placeholder image"/>
-                <div class="media-body">
-                    <h5 class="mt-0">Media heading</h5>
-                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
-                    scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                    vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
-                    nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        <div class="col-3">
+            <!-- <div class="media">
+                 <img class="mr-3" src="..." alt="Generic placeholder image"/>
+                 <div class="media-body">
+                     <h5 class="mt-0">Media heading</h5>
+                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                     scelerisque ante sollicitudin. Cras purus odio, vestibulum in
+                     vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
+                     nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                 </div>
+             </div>-->
+
+            <div class="profile-card">
+                <div class="card-header">
+                    <div class="pic">
+                        <img src="{% static 'images/sadi.jpg' %}" alt="">
+                    </div>
+                    <div class="name">M.i Showmik</div>
+                    <div class="desc">Developer & Designer</div>
+                    <div class="sm">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-youtube"></a>
+                    </div>
+                    <a href="#" class="contact-btn">Contact Me</a>
                 </div>
-            </div>-->
+            </div>
 <div class="profile-card">
     <div class="card-header">
       <div class="pic">
@@ -279,6 +295,42 @@
     
   </div>
   
+                <div class="card-footer">
+                    <div class="numbers">
+                        <div class="item">
+                            <span>120</span>
+                            Posts
+                        </div>
+                        <div class="border"></div>
+                        <div class="item">
+                            <span>127</span>
+                            Following
+                        </div>
+                        <div class="border"></div>
+                        <div class="item">
+                            <span>120K</span>
+                            Followers
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="profile-card">
+                <div class="card-header">
+
+                    <div class="name">M.i Showmik</div>
+                    <div class="desc">Developer & Designer</div>
+                    <div class="sm">
+                        <a href="#" class="fab fa-facebook-f"></a>
+                        <a href="#" class="fab fa-twitter"></a>
+                        <a href="#" class="fab fa-github"></a>
+                        <a href="#" class="fab fa-youtube"></a>
+                    </div>
+                    <a href="#" class="contact-btn">Contact Me</a>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </main>

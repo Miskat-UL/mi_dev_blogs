@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: black !important;
+
+
+}
+
+*{
+    margin: 0;
+
+    box-sizing: border-box;
+}
+
+.fff{
+
+    width: 70%;
+    padding: 10px 20px;
+    margin: 0 auto;
+    height: auto;
+    background-color: #EDEDED;
+
+}
+
+
+main{
+    background-color: white !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+
+
+.inp_sec{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    padding: 10px 0;
+}
+.title_div .inp_title{
+    width: 80%;
+}
+.inp_title{
+    background-color: none;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+.inp_title:focus{
+    outline: none;
+}
+
+.inp_tags{
+    background-color: none;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.inp_tags:focus{
+    outline: none;
+}
+

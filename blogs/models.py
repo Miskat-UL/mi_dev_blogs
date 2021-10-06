@@ -49,7 +49,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField(max_length=10000)
     img = models.ImageField(upload_to="media")
-    author = models.ForeignKey(Author, on_delete=SET_NULL,null=True)
+    author = models.ForeignKey(Author, on_delete=SET_NULL, null=True)
     time_created = models.DateTimeField(auto_now_add=True)
     react = models.IntegerField(blank=True, null=True)
     comment = models.ManyToManyField(Comment)
