@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href={% static "css/author.css" %}>
+
+    <title>Author Page</title>
+  </head>
+  <body>
+
+
+    {% include 'blogs/navbar.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="author.css">
+    <title>Author Page</title>
+  </head>
+  <body>
+
+
+
+
+
+    <main class="row p-4">
+
+        <div class="col-lg-4 main_card col-md-10">
+          <div class="d-flex flex-column justify-content-between">
+            <div class="d-flex profile_card">
+              <div class="img_author pl-2 pt-2">
+                  <img src={% get_media_prefix %}{{ author.author_img }} alt="sadi">
+              </div>
+              <div class="p-2 profile">
+                  <div class="d-flex flex-column">
+                      <div>
+                          <h4>Md. Tofayel Islam</h4>
+                          <p>Senior Developer</p>
+                      </div>
+                      <div class="d-flex follower_count  ">
+                          <div class="p-2 d-flex flex-sm-column single_counter">
+                              <p class="font-weight-bold ">Posts</p>
+                              <span class="text-center number1 ">32</span>
+                          </div>
+                          <div class="p-2 single_counter">
+                              <p class="font-weight-bold">Follower</p>
+                              <p class="text-center number2 p-0">13k</p>
+                          </div>
+                          <div class="p-2 single_counter">
+                              <p class="font-weight-bold">Rating</p>
+                              <p class="text-center number3 p-0">9.0</p>
+                          </div>
+                      </div>
+                      <div class="d-flex mt-5 btn_cont">
+                        <button class="p-2 btn mr-3 btn-sm btn1 btn-outline-danger">Follow</button>
+                        <button class="p-2 btn btn-sm btn2 btn-danger">Follow</button>
+                      </div>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="p-2">
+            <div class="card  mb-3" style="max-width: 23rem;">
+              <div class="card-header">Author Information</div>
+              <div class="card-body text-dark">
+               <div class="d-flex justify-content-between border-bottom">
+                 <p class="mr-3">University: </p>
+                 <p>Daffodil International University</p>
+               </div>
+               <div class="d-flex justify-content-between border-bottom pt-3">
+                <p>Subject : </p>
+                <p>Software Engineering</p>
+              </div>
+              <div class="d-flex justify-content-between border-bottom pt-3">
+                <p>Work : </p>
+                <p><a href="github">Null</a></p>
+              </div>
+              <div class="d-flex justify-content-between border-bottom pt-3">
+                <p>Github : </p>
+                <p><a href="github">Github.com</a></p>
+              </div>
+              <div class="d-flex justify-content-between pt-3">
+                <p>Github : </p>
+                <p><a href="github">Github.com</a></p>
+              </div>
+
+              </div>
+            </div>
+          </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-8 col-sm-7">
+          <h2 class="display-4 mb-4">Recent Blogs</h2>
+          <div class="card mb-3">
+            <div class="card-header">
+              Quote
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p class="title_ath">
+                  What is python-dev package used for - Stack Overflow</p>
+                <div class="d-flex">
+                  <p class="small mr-2 text-danger">#Python</p>
+                  <p class="small text-danger">#javaScripts</p>
+                </div>
+                <footer class="d-flex justify-content-end"><span class="mr-3"><i class="far fa-heart">  43</i></span></span>  <span><i class="far fa-comment"> 13</i></span></footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+
+    
+
+
+
+{#    {% include 'blogs/footer.html' %}#}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

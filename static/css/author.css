@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*padding: 50px;*/
+
+    font-family: monospace;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+main{
+       max-width: 95vw;
+}
+
+
+.img_author img{
+    width: 150px;
+}
+
+.single_counter{
+    position: relative;
+}
+
+.number1{
+    font-size: 19px;
+    font-weight: 700 !important;
+    position: absolute;
+    bottom: 3px;
+    left: 19px;
+}
+.number2{
+    font-size: 19px;
+    font-weight: 700 !important;
+    position: absolute;
+    top: 23.5px;
+    left: 19px;
+}
+.number3{
+    font-size: 19px;
+    font-weight: 700 !important;
+    position: absolute;
+    top: 23.5px;
+    left: 19px;
+}
+
+.profile{
+    position: relative;
+}
+
+.profile_card{
+    border: 1px solid #dddddd;
+    width: 390px;
+}
+
+.follower_count{
+    position: absolute;
+    top: 70px;
+    background-color: #F7F7F7;
+}
+.btn2{
+    margin-left: 10px;
+}
+.btn_cont{
+    margin-left: 60px;
+}
+
+.title_ath{
+    font-size: 30px;
+    font-family: monospace;
+}
