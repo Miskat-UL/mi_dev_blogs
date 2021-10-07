@@ -26,34 +26,6 @@
 
     {% include 'blogs/navbar.html' %}
 
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="author.css">
-    <title>Author Page</title>
-  </head>
-  <body>
-
-
-
-
-
     <main class="row p-4">
 
         <div class="col-lg-4 main_card col-md-10">
@@ -65,7 +37,7 @@
               <div class="p-2 profile">
                   <div class="d-flex flex-column">
                       <div>
-                          <h4>Md. Tofayel Islam</h4>
+                          <h4>{{author.name}}</h4>
                           <p>Senior Developer</p>
                       </div>
                       <div class="d-flex follower_count  ">
@@ -97,23 +69,23 @@
               <div class="card-body text-dark">
                <div class="d-flex justify-content-between border-bottom">
                  <p class="mr-3">University: </p>
-                 <p>Daffodil International University</p>
+                 <p>{{author.institution}}</p>
                </div>
                <div class="d-flex justify-content-between border-bottom pt-3">
                 <p>Subject : </p>
-                <p>Software Engineering</p>
+                <p>{{author.study_subject}}</p>
               </div>
               <div class="d-flex justify-content-between border-bottom pt-3">
-                <p>Work : </p>
-                <p><a href="github">Null</a></p>
+                <p>github : </p>
+                <p><a href="github">{{author.github}}</a></p>
               </div>
               <div class="d-flex justify-content-between border-bottom pt-3">
-                <p>Github : </p>
-                <p><a href="github">Github.com</a></p>
+                <p>Facebook : </p>
+                <p><a href="github">{{author.facebook}}</a></p>
               </div>
               <div class="d-flex justify-content-between pt-3">
-                <p>Github : </p>
-                <p><a href="github">Github.com</a></p>
+                <p>Twitter : </p>
+                <p><a href="github">{{author.Twitter}}</a></p>
               </div>
 
               </div>
