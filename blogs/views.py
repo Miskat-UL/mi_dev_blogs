@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Blog
+from .models import Blog,Author
 
 
 def home(request):
@@ -25,11 +25,13 @@ def home2(request, pk):
 
 
 def home3(request, pk):
-    current_blog = Blog.objects.get(id=pk)
-    author = current_blog.author
-    context = {
-        'author': author
+    author = Author.objects.get(id=pk)
+    # author = current_blog.author
+    author_blog = Blog.objects.filter(author=author)
 
+    context = {
+        'author': author,
+        'aut': author_blog
     }
     return render(request, 'blogs/author_page.html', context)
 
@@ -42,5 +44,20 @@ def get_likes(request, pk):
 
 
 def blog_write(request):
+    if request.method == "GET":
+        authors = Author.objects.all()
+        context = {
+            'aut': authors
+        }
 
-    return render(request, 'blogs/blogWrite.html')
+        return render(request, 'blogs/blogWrite.html', context)
+    if request.method == "POST":
+        blog = request.POST['editordata']
+        title = request.POST['title']
+        author = request.POST['author']
+        b = Blog.objects.create(title=title, body=blog)
+        b.author_id = author
+        b.save()
+
+        return redirect('/')
+

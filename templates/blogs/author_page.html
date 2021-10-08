@@ -65,7 +65,7 @@
               <div class="p-2 profile">
                   <div class="d-flex flex-column">
                       <div>
-                          <h4>Md. Tofayel Islam</h4>
+                          <h4>{{ author.name }}</h4>
                           <p>Senior Developer</p>
                       </div>
                       <div class="d-flex follower_count  ">
@@ -97,7 +97,7 @@
               <div class="card-body text-dark">
                <div class="d-flex justify-content-between border-bottom">
                  <p class="mr-3">University: </p>
-                 <p>Daffodil International University</p>
+                 <p>{{ author.institution }}</p>
                </div>
                <div class="d-flex justify-content-between border-bottom pt-3">
                 <p>Subject : </p>
@@ -125,14 +125,15 @@
 
         <div class="col-lg-8 col-sm-7">
           <h2 class="display-4 mb-4">Recent Blogs</h2>
-          <div class="card mb-3">
+             {% for at in aut %}
+          <div class="card mb-4">
             <div class="card-header">
               Quote
             </div>
             <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p class="title_ath">
-                  What is python-dev package used for - Stack Overflow</p>
+                  {{ at.title }}</p>
                 <div class="d-flex">
                   <p class="small mr-2 text-danger">#Python</p>
                   <p class="small text-danger">#javaScripts</p>
@@ -140,7 +141,9 @@
                 <footer class="d-flex justify-content-end"><span class="mr-3"><i class="far fa-heart">  43</i></span></span>  <span><i class="far fa-comment"> 13</i></span></footer>
               </blockquote>
             </div>
+
           </div>
+            {% endfor %}
         </div>
 
     </main>

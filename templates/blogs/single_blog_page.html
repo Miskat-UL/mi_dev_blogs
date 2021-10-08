@@ -50,11 +50,13 @@
                         {% endfor %}
                     </div>
 
+                    {% if current.img %}
+                        <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid my-5" alt="Responsive image">
+                    {% endif %}
 
-                    <img src="{% get_media_prefix %}{{ current.img }}" class="img-fluid my-5" alt="Responsive image">
 
                     <p>
-                        {{ current.body }}
+                        {{ current.body|safe }}
                     </p>
                     <div class="">
                         <div class="d-flex flex-row fs-12">

@@ -8,6 +8,7 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+
 class Category(models.Model):
     TYPE_CHOICES = [
         ('category', 'Category'),
@@ -26,7 +27,7 @@ class Author(models.Model):
     name = models.CharField(max_length=50)
     author_img = models.ImageField(upload_to="media")
     email = models.EmailField()
-    institution = models.CharField(max_length=100 , blank=True,null=True)
+    institution = models.CharField(max_length=100, blank=True, null=True)
     study_subject = models.CharField(max_length=100, blank=True, null=True)
     current_year = models.CharField(max_length=50, blank=True, null=True)
     github = models.CharField(max_length=100, blank=True, null=True)

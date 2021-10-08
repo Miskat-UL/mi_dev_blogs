@@ -43,9 +43,10 @@
 
     <div class="row main_main">
       <div class="col-8">
-          {% for blog in blog %}
+
         <section class="blogs_section">
           <h2>Recent Posts</h2>
+            {% for blog in blog %}
           <div class="blog_title">
             <div class="head_share">
               <a href="{% url 'news' blog.id %}">
@@ -71,12 +72,7 @@
               ><i class="fas fa-user-friends"> {{ blog.author.name }} | {{ blog.time_created }}</i></a
             >
             <p>
-              Python includes a number of predefined built-in functions that can
-              be utilized by the end-user by simply calling them. These
-              functions not only make programmers’ jobs easier, but they help
-              establish a common coding environment. In this tutorial, you’ll
-              learn about three of Python’s most powerful functions: map(),
-              filter(), and reduce().
+            {{ blog.body|truncatechars:255|safe  }}
             </p>
             <p class="news_class">
               <i class="far fa-newspaper"></i>
