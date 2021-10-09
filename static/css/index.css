@@ -1,0 +1,165 @@
+body{
+    background-color: #EDEDED;
+
+    font-family: monospace;
+}
+.navbar{
+    background-color: #303841;
+}
+.navbar a{
+    color: #6D9886;
+}
+.nav-link,.dropdown-menu{
+    color: #DA0037;
+}
+.nav-link:hover{
+    color: #EDEDED;
+}
+
+.btn_post{
+    background-color: #6D9886;
+}
+
+
+.fa-bell{
+font-size: 21px;
+line-height: 2;
+}
+
+.select_posts{
+    width: auto;
+    height: 50px;
+    font-weight: 800;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+    
+}
+
+.btn_top{
+    border: 1px solid #6D9886;   
+    text-decoration: none; 
+    color: #6D9886;
+}
+
+.btn_top:hover{
+    background-color: #6D9886;
+    color: white;
+}
+
+
+.select_posts a{
+    color: #6D9886 !important;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    text-decoration: none;
+}
+.main_item{
+    max-width: 99%;
+    margin: 0 auto;
+    background-color: #CEE5D0 ;
+}
+.side_bar{
+    position: relative;
+
+    top: 9px;
+
+}
+.card_1:hover{
+    border: 3px solid #212121;
+}
+.card-header{
+    height: 55px;
+    background-color: #303841
+    ;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: whitesmoke;
+}
+.author_name{
+    margin: 0px;
+    height: 20px;
+    position: relative;
+    top: 9px;
+}
+.title a{
+    text-decoration: none;
+    color: #4A403A;
+
+}
+.title a:hover{
+    color: #6D9886;
+    border-bottom: 1px solid #6D9886;
+}
+
+
+/* side bar */
+
+.side_bar_header{
+    height: 40px;
+    background-color: #212121;
+    color: #EDEDED ;
+}
+.side_bar_header p{
+    display: inline;
+    position: relative;
+    left: 10px;
+    top: 8px;
+    font-size: 18px;
+
+}
+.cpc_title a{
+    text-decoration: none;
+    color: #212121;
+}
+.cpc_title a:hover{
+    border-bottom: 1.5px solid #212121;
+}
+.side_bar_header2 p {
+    margin: 0 auto;
+}
+
+.foot{
+    background-color: #303841;
+    max-width: 99%;
+    margin: 0 auto;
+
+}
+
+.footer_left li{
+    list-style-type: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #EDEDED;
+
+}
+.django{
+    color: #6D9886;
+}
+.btn_footer{
+    border: 1px solid #6D9886;
+    color: #6D9886;
+}
+.btn_footer:hover{
+    background-color: #6D9886;
+    color: white;
+}
+.donate_sec{
+    position: relative;
+    top: 50px;
+    background-color: transparent;
+    color: #EDEDED;
+    border: none;
+}
+.donate_sec_1{
+    border: none;
+}

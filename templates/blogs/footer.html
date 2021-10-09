@@ -1,36 +1,32 @@
 {% load static %}
-<footer>
-      <div class="my_footer">
-        <div class="footer_grid">
-          <h2>Communicate With Us</h2>
-          <h3>Email</h3>
-          <a href=""><p>miskatshowmik@gmail.com</p></a>
-        </div>
-        <div class="footer_grid">
-          <h2>My Social Networks</h2>
-          <ul>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-github"></i></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li class="icon_lists">
-              <a class="icon_links" href="#"><i class="fab fa-linkedin"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer_grid">
-          <h2>From</h2>
-          <img src="{% static 'images/bd.png' %}" alt="" />
-          <h4 style="font-family: sans-serif; margin-top: 10px">
-            &copy; showmik <span id="date"></span>
-          </h4>
+{% block footer %}
+
+
+
+<footer class="row foot">
+      <div class="col-md-5">
+        <div class="d-flex flex-column">
+          <div class="footer_left">
+            <ul class="d-flex flex-column mt-5">
+              <li class="pb-3"><span>-</span> <a class="footer_link mr-3" href="">About Us</a></li>
+              <li class="pb-3"><span>-</span> <a class="footer_link" href="">About Us</a></li>
+              <li class="pb-3"><span>-</span> <a class="footer_link" href="">About Us</a></li>
+              <li class="pb-3"><span>-</span> <a class="footer_link" href="">About Us</a></li>
+              <li class="pb-3"><span>-</span> <a class="footer_link" href="">About Us</a></li>
+            </ul>
+          </div>
+      </div>
+      </div>
+      <div class="col-md-7 donate_sec_1">
+        <div class="card text-center donate_sec ">
+          <div class="card-body ">
+            <h5 class="card-title">Made With 🖤 and <span class="django">Django</span></h5>
+            <p class="card-text">We are a non profit organization. Donate us for support</p>
+            <a href="#" class="btn btn_footer">Donate <span><i class="fas fa-hand-holding-usd"></i></span></a>
+          </div>
         </div>
       </div>
+
+
     </footer>
+{% endblock %}

@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,7 @@
     />
     <link rel="stylesheet" href={% static "css/style2.css" %}/>
     <link rel="stylesheet" href={% static "css/blog.css" %}/>
+    <link rel="stylesheet" href={% static "css/index.css" %}/>
 
     <title>Document</title>
 </head>
@@ -52,14 +54,14 @@
                 </div>
             </div>
 
-            <textarea id="summernote" name="editordata" class="textAR">
+            <textarea id="summernote" name="editordata" class="textAR" style="min-height: 100px">
                 Write something what is on your mind....
             </textarea
             >
 
 
             <a href=""{% url 'home' %}>
-                <button class="btn btn-outline-danger my-3">Publish</button>
+                <button class="btn btn_pub mt-4">Publish</button>
             </a>
 
         </form>
@@ -72,7 +74,12 @@
 
 <script>
     $(document).ready(function () {
-        $("#summernote").summernote();
+        $("#summernote").summernote(
+            {
+                height: 300,
+                focus: true
+            }
+        );
     });
 </script>
 </body>

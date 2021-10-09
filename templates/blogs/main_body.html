@@ -1,0 +1,96 @@
+{% extends 'blogs/index.html' %}
+{% load static %}
+
+
+{% block main %}
+    <div class="jumbotron">
+        <h1 class="display-4">
+            Bonjour, DIU Developers!
+            <span
+            ><img src={% static "images/daffodil.png" %} width="50px" alt="daffodil"
+            /></span>
+        </h1>
+        <p class="lead">
+            Welcome to our website! I'm sure you are having fun and Bla Bla Bla!
+            Write something and make us PROUD
+        </p>
+        <hr class="my-4"/>
+        <p>
+            It won't take much time to sign up for our community! Please
+            SignUp/Login to stay with us! OR GO ANNONYMOUS 💀
+        </p>
+        <p class="lead">
+            <a class="btn btn_top btn-lg" href="#" role="button"
+            >SignUp/Login</a
+            >
+        </p>
+    </div>
+    <hr class="my-4"/>
+
+    <main>
+        <div class="select_posts">
+            <div class="d-flex">
+                <a href="" class="px-3 py-2">latest</a>
+                <a href="" class="px-3 py-2">Top Post</a>
+                <a href="" class="px-3 py-2">Need Help!</a>
+            </div>
+        </div>
+
+        <div class="row main_item">
+
+            <div class="col-md-7 m-4">
+                    {% for blog in blog %}
+                    <div class="card my-2 card_1">
+                        <div class="card-header">
+                            <div class="card_author d-flex">
+
+                                <a href="{% url 'author' blog.author_id %}"><p class="mr-4 author_name">{{ blog.author.name }}</p></a>
+                                <a href="#"><img src={% get_media_prefix %}{{ blog.author.author_img }} width="40"
+                                                 class="rounded-circle" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="blockquote-footer">9 may, 2021</p>
+                            <blockquote class="blockquote mb-0 title ">
+
+                                <a href="{% url 'news' blog.id %}" class="">{{ blog.title }}</a>
+
+                                <footer class="blockquote-footer mt-4">
+                                    {{ blog.body|safe|truncatewords:50 }}
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    {% endfor %}
+            </div>
+
+            <div class="col-md-4 mt-4 ">
+                <div class="d-flex flex-column side_bar">
+                    <div class="card border-dark mb-3" style="max-width: 38rem;">
+                        <div class="side_bar_header">
+                            <p>CPC, DIU - Recent Posts <span><img src={% static "images/cpc.png" %} width="40px alt=" aa"></span>
+                            </p>
+                        </div>
+                        <div class="card-body text-dark" style="max-width: 18rem;">
+                            <h5 class="card-title cpc_title"><span>-</span> <a href="#">Post titles</a></h5>
+                            <h5 class="card-title cpc_title"><span>-</span> <a href="#">Post titles</a></h5>
+                        </div>
+
+                    </div>
+                    <div class="card border-dark mb-3">
+                        <div class="side_bar_header side_bar_header2">
+                            <p>Donate<span></p>
+                        </div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title">Dark card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </main>
+
+{% endblock main %}

@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 
@@ -22,6 +23,7 @@
 
 
     <link rel="stylesheet" href="{% static 'css/style2.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
 
 </head>
 
@@ -298,7 +300,9 @@
 </main>
 
 
-{% include 'blogs/footer.html' %}
+{% block footer %}
+
+{% endblock %}
 </body>
 
 <script

@@ -7,7 +7,7 @@ def home(request):
     context = {
         'blog': blogs
     }
-    return render(request, 'blogs/index2.html', context)
+    return render(request, 'blogs/main_body.html', context)
     
 
 def home2(request, pk):

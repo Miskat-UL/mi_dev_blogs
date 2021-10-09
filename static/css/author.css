@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     line-height: 1;
-    /*padding: 50px;*/
 
     font-family: monospace;
 }
@@ -12,9 +11,21 @@ body{
     padding:0;
     box-sizing: border-box;
 }
-main{
-       max-width: 95vw;
+
+.row{
+    max-width: 99%;
 }
+
+.main_card{
+
+}
+.main_sec{
+    background-color: #6D9886;
+}
+
+
+
+
 
 
 .img_author img{
@@ -25,27 +36,15 @@ main{
     position: relative;
 }
 
-.number1{
+.number1,.number3,.number2{
     font-size: 19px;
     font-weight: 700 !important;
     position: absolute;
-    bottom: 3px;
+    top: 27.5px;
+    color: #6D9886;
     left: 19px;
 }
-.number2{
-    font-size: 19px;
-    font-weight: 700 !important;
-    position: absolute;
-    top: 23.5px;
-    left: 19px;
-}
-.number3{
-    font-size: 19px;
-    font-weight: 700 !important;
-    position: absolute;
-    top: 23.5px;
-    left: 19px;
-}
+
 
 .profile{
     position: relative;
@@ -63,6 +62,17 @@ main{
 }
 .btn2{
     margin-left: 10px;
+    border: 1px solid #6D9886;
+
+    font-weight: 800;
+}
+.btn1{
+    border: 1px solid #6D9886;
+    font-weight: 800;
+}
+.btn1:hover,.btn2:hover {
+    background-color: #6D9886;
+    color: #F7F7F7;
 }
 .btn_cont{
     margin-left: 60px;
@@ -71,4 +81,15 @@ main{
 .title_ath{
     font-size: 30px;
     font-family: monospace;
+}
+.follower_count p:last-child{
+
+    color: #6D9886;
+}
+
+.tags{
+    color: #6D9886;
+}
+.author_div{
+    border: 1px solid #6D9886;
 }
