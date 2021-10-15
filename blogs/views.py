@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Blog,Author
 
 
+def login_page(request):
+    context = {}
+    return render(request, 'blogs/login.html')
+
+
 def home(request):
     blogs = Blog.objects.all()
     context = {

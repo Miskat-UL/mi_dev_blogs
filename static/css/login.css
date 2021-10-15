@@ -1,0 +1,147 @@
+body{
+    background-color: #EDEDED;
+
+    font-family: monospace;
+}
+
+
+
+
+
+
+/* navbar css */
+.navbar{
+    background-color: #303841;
+}
+.navbar a{
+    color: #6D9886;
+}
+.nav-link,.dropdown-menu{
+    color: #DA0037;
+}
+.nav-link:hover{
+    color: #EDEDED;
+}
+.fa-bell{
+    font-size: 21px;
+    line-height: 2;
+    }
+
+
+
+/* main code starts */
+
+main{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login_main{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.login_main form{
+    width: 50%;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 1px solid #6D9886;
+    margin: 0 auto;
+    height: 400px;
+    background-color: #303841;
+    
+}
+
+
+.inp1:not(:last-child){
+    margin-bottom: 25px;
+}
+
+.inp{
+
+    padding: 7px 0;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+.inp:focus{
+    outline: none;
+    border: 4px solid #6D9886;
+}
+label{
+    color: #6D9886;
+}
+
+.conf_sec a{
+    color: #6D9886;
+}
+.conf_sec p{
+    color: #EDEDED;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer css code */
+
+.foot{
+    background-color: #303841;
+    max-width: 99%;
+    margin: 0 auto;
+
+}
+
+.footer_left li{
+    list-style-type: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #EDEDED;
+
+}
+.django{
+    color: #6D9886;
+}
+.btn_footer{
+    border: 1px solid #6D9886;
+    color: #6D9886;
+}
+.btn_footer:hover{
+    background-color: #6D9886;
+    color: white;
+}
+.donate_sec{
+    position: relative;
+    top: 50px;
+    background-color: transparent;
+    color: #EDEDED;
+    border: none;
+}
+.donate_sec_1{
+    border: none;
+}
