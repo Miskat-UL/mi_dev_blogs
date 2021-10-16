@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Blog,Author
 
 
+def register_page(request):
+    context = {}
+    return render(request, 'blogs/register.html')
+
+
 def login_page(request):
     context = {}
     return render(request, 'blogs/login.html')

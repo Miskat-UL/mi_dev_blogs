@@ -1,0 +1,201 @@
+body{
+    background-color: #EDEDED;
+
+    font-family: monospace;
+}
+
+
+
+
+
+
+/* navbar css */
+.navbar{
+    background-color: #303841;
+}
+.navbar a{
+    color: #6D9886;
+}
+.nav-link,.dropdown-menu{
+    color: #DA0037;
+}
+.nav-link:hover{
+    color: #EDEDED;
+}
+.fa-bell{
+    font-size: 21px;
+    line-height: 2;
+    }
+
+
+
+/* main code starts */
+
+main{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 99%;
+    
+}
+.reg_first{
+    
+}
+.reg-p{
+    font-size: 50px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    left: 40px;
+    text-transform: uppercase;
+}
+.reg-p span{
+    color: #6D9886;
+}
+.sp1{
+    color: #303841;
+    font-size: 50px;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    left: 73px;
+    text-transform: uppercase;
+}
+.sp2{
+    position: relative;
+    left: 90px;
+    top: -10px;
+}
+.btn_donate{
+    border: 1px solid #6D9886;
+    color: #303841;
+}
+.btn_donate:hover{
+    background-color: #6D9886;
+    color: #EDEDED;
+}
+
+.login_main{
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+.login_main form{
+    width: 70%;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border: 1px solid #6D9886;
+    margin: 0 auto;
+    height: 650px;
+    background-color: #303841;
+    
+}
+
+
+.inp1:not(:last-child){
+    margin-bottom: 25px;
+}
+
+.inp{
+
+    padding: 7px 0;
+    padding-left: 5px;
+    border-radius: 4px;
+}
+.inp:focus{
+    outline: none;
+    border: 4px solid #6D9886;
+}
+label{
+    color: #6D9886;
+}
+
+.conf_sec a{
+    color: #6D9886;
+}
+.conf_sec p{
+    color: #EDEDED;
+}
+
+.other_reg ul{
+    width: 81%;
+   margin-left: 20px;
+}
+.other_reg p{
+    color: #EDEDED;
+    width: 81%;
+    margin: 0 auto;
+}
+.other_reg li{
+    list-style-type: none;
+    color: #EDEDED;
+}
+.other_reg li>a{
+    color: #EDEDED;
+}
+.fa-github,.fa-stack-overflow,.fa-google{
+    font-size: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer css code */
+
+.foot{
+    background-color: #303841;
+    max-width: 99%;
+    margin: 0 auto;
+
+}
+
+.footer_left li{
+    list-style-type: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #EDEDED;
+
+}
+.django{
+    color: #6D9886;
+}
+.btn_footer{
+    border: 1px solid #6D9886;
+    color: #6D9886;
+}
+.btn_footer:hover{
+    background-color: #6D9886;
+    color: white;
+}
+.donate_sec{
+    position: relative;
+    top: 50px;
+    background-color: transparent;
+    color: #EDEDED;
+    border: none;
+}
+.donate_sec_1{
+    border: none;
+}
