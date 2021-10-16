@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.deletion import SET_NULL
+from django.contrib.auth.models import User
 
 
 class Tag(models.Model):
@@ -24,8 +25,9 @@ class Category(models.Model):
 
 
 class Author(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
-    author_img = models.ImageField(upload_to="media")
+    author_img = models.ImageField(upload_to="media", default='static/images/default_user.png')
     email = models.EmailField()
     institution = models.CharField(max_length=100, blank=True, null=True)
     study_subject = models.CharField(max_length=100, blank=True, null=True)

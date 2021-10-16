@@ -1,17 +1,44 @@
 from django.shortcuts import render, redirect
-from .models import Blog,Author
+from .forms import CreateUserFrom
+from .models import Blog, Author
+from django.contrib import messages
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 
 def register_page(request):
-    context = {}
-    return render(request, 'blogs/register.html')
+    form = CreateUserFrom()
+    if request.method == "POST":
+        form = CreateUserFrom(request.POST)
+        if form.is_valid():
+            user = form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, 'User create successfull ' + username)
+            return redirect('login')
+    context = {"forms": form}
+    return render(request, 'blogs/register.html',context)
 
 
 def login_page(request):
+    if request.method == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            login(request, user)
+            author = Author.objects.get(user=user)
+            print(author)
+            context = {
+                'author': author
+            }
+            return redirect('/')
+        else:
+            messages.info(request,'username or password is incorrect')
     context = {}
     return render(request, 'blogs/login.html')
 
 
+@login_required(login_url='login')
 def home(request):
     blogs = Blog.objects.all()
     context = {
@@ -22,6 +49,7 @@ def home(request):
 
 def home2(request, pk):
     current_blog = Blog.objects.get(id=pk)
+    print(current_blog)
     tag = current_blog.tags.all()
     tags = []
     for i in range(len(tag)):
