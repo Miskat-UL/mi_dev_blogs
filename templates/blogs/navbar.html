@@ -1,6 +1,6 @@
 {% load static %}
     <nav class="navbar navbar-expand-lg navbar-custom">
-      <a class="navbar-brand" href="#">DIU BLOG</a>
+      <a class="navbar-brand" href="{% url 'home' author.name %}">DIU BLOG</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -44,15 +44,15 @@
 
         <div class="d-flex profile_sec">
           <div class="mr-5">
-            <a href="{% url 'blog_create' %}" class="btn text-light btn_post">{{ request.user }}</a>
+            <a href="{% url 'blog_create' %}" class="btn text-light btn_post">{{ author.name }}</a>
           </div>
           <div class="mr-4">
             <a href="#"><i class="far fa-bell"></i></a>
           </div>
           <div class="mr-5">
-            <a href="#">
+            <a href="{% url 'author' author.id %}">
               <img
-                src={{ request.user.author_img }}
+                src={% get_media_prefix %}{{ author.author_img }}
                 width="40px"
                 class="rounded-circle"
                 alt=""

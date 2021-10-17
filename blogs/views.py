@@ -26,23 +26,23 @@ def login_page(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            author = Author.objects.get(user=user)
-            print(author)
-            context = {
-                'author': author
-            }
-            return redirect('/')
+            print(user.id)
+
+            return redirect(f'home/{user}')
         else:
-            messages.info(request,'username or password is incorrect')
+            messages.info(request, 'username or password is incorrect')
     context = {}
     return render(request, 'blogs/login.html')
 
 
 @login_required(login_url='login')
-def home(request):
+def home(request, pk):
     blogs = Blog.objects.all()
+    author = Author.objects.get(name=pk)
+    print(request.user.id)
     context = {
-        'blog': blogs
+        'blog': blogs,
+        'author': author
     }
     return render(request, 'blogs/main_body.html', context)
     
