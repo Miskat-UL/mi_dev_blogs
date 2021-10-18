@@ -1,0 +1,95 @@
+/* boilar plate code  do not touch */
+
+body{
+    background-color: #EDEDED;
+
+    font-family: monospace;
+}
+.navbar{
+    background-color: #303841;
+}
+.navbar a{
+    color: #6D9886;
+}
+.nav-link,.dropdown-menu{
+    color: #DA0037;
+}
+.nav-link:hover{
+    color: #EDEDED;
+}
+
+.btn_post{
+    background-color: #6D9886;
+}
+
+
+.fa-bell{
+font-size: 21px;
+line-height: 2;
+}
+.foot{
+    background-color: #303841;
+    max-width: 99%;
+    margin: 0 auto;
+
+}
+/* footer code */
+
+.footer_left li{
+    list-style-type: none;
+}
+
+.footer_link{
+    text-decoration: none;
+    color: #EDEDED;
+
+}
+.django{
+    color: #6D9886;
+}
+.btn_footer{
+    border: 1px solid #6D9886;
+    color: #6D9886;
+}
+.btn_footer:hover{
+    background-color: #6D9886;
+    color: white;
+}
+.donate_sec{
+    position: relative;
+    top: 50px;
+    background-color: transparent;
+    color: #EDEDED;
+    border: none;
+}
+.donate_sec_1{
+    border: none;
+}
+
+/* boilar plate code do not touch */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+/* start here */
+.main{
+    
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.author_img{
+    height: 400px;
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px;
+
+}
+.author_img img{
+    width: 100%
+}
+.btn_form{
+    position: absolute;
+    right: 130px;
+}

@@ -49,6 +49,7 @@ def home(request, pk):
 
 def home2(request, pk):
     current_blog = Blog.objects.get(id=pk)
+    author = Author.objects.get(id=pk)
     print(current_blog)
     tag = current_blog.tags.all()
     tags = []
@@ -57,7 +58,8 @@ def home2(request, pk):
         tags.append(tag[i])
     context = {
         'current': current_blog,
-        'tags': tags
+        'tags': tags,
+        'author':author
     }
     return render(request, 'blogs/single_blog_page.html', context)
 
@@ -81,11 +83,21 @@ def get_likes(request, pk):
     return redirect('/')
 
 
+def author_edit(request,pk):
+    author = Author.objects.get(id=pk)
+    context = {
+        'author':author
+    }
+    return render(request,'blogs/author_edit.html', context)
+
+
 def blog_write(request):
     if request.method == "GET":
         authors = Author.objects.all()
+
         context = {
-            'aut': authors
+            'aut': authors,
+
         }
 
         return render(request, 'blogs/blogWrite.html', context)
