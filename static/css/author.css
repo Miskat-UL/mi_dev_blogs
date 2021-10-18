@@ -93,3 +93,11 @@ body{
 .author_div{
     border: 1px solid #6D9886;
 }
+.btn_settings{
+    text-decoration: none;
+
+}
+
+.fa-user-cog{
+    color: #6D9886;
+}
